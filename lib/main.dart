@@ -7,11 +7,12 @@ void main() {
 }
 
 
-
+class MeteoPlusApp extends StatelessWidget {
+  const MeteoPlusApp({super.key});
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 800),
+      designSize: const Size(375, 812),
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
