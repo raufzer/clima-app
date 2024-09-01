@@ -69,6 +69,7 @@ flutter:
   assets:
     - assets/icons/current_location.svg
     - assets/images/partly_cloudy.svg
+    - assets/images/partly_cloudy.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
