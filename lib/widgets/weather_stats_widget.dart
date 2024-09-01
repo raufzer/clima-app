@@ -10,11 +10,7 @@ class WeatherStats extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(
-          'assets/images/partly_cloudy.svg',
-          width: 135,
-          height: 130,
-        ),
+
         Text(
           '13°',
           style: GoogleFonts.poppins(
