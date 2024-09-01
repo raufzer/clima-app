@@ -7,8 +7,6 @@ void main() {
 }
 
 
-class MeteoPlusApp extends StatelessWidget {
-  const MeteoPlusApp({super.key});
 
   @override
   Widget build(BuildContext context) {
