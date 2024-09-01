@@ -6,7 +6,6 @@ void main() {
   runApp(const MeteoPlusApp());
 }
 
-// commit 
 class MeteoPlusApp extends StatelessWidget {
   const MeteoPlusApp({super.key});
 
