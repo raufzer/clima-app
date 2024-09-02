@@ -30,6 +30,9 @@ class HomeScreen extends StatelessWidget {
             height: 18,
           ),
           TimeSelector(),
+          SizedBox(
+            height: 20,
+          ),
           HourlyWeatherView()
         ],
       ),
