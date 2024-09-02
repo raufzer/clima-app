@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/utils/gradient_colors.dart';
+import 'package:meteoplus_app/utils/gradient__primary_colors.dart';
 import 'package:meteoplus_app/widgets/city_title_widget.dart';
 import 'package:meteoplus_app/widgets/current_location_widget.dart';
-import 'package:meteoplus_app/widgets/time_selector_button.dart';
+import 'package:meteoplus_app/widgets/hourly_weather_view.dart';
+import 'package:meteoplus_app/widgets/time_selector_widget.dart';
 import 'package:meteoplus_app/widgets/weather_stats_widget.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
-      gradient: gradientColors,
+      gradient: gradientPrimaryColors,
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -29,6 +30,10 @@ class HomeScreen extends StatelessWidget {
             height: 18,
           ),
           TimeSelector(),
+          SizedBox(
+            height: 20,
+          ),
+          HourlyWeatherView(),
         ],
       ),
     );
