@@ -29,6 +29,7 @@ class HomeScreen extends StatelessWidget {
             height: 18,
           ),
           TimeSelector(),
+          
         ],
       ),
     );
