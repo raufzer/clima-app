@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meteoplus_app/utils/gradient__primary_colors.dart';
 import 'package:meteoplus_app/widgets/city_title_widget.dart';
 import 'package:meteoplus_app/widgets/current_location_widget.dart';
+import 'package:meteoplus_app/widgets/details_button.dart';
 import 'package:meteoplus_app/widgets/up_arrow_button.dart';
 import 'package:meteoplus_app/widgets/upward_slider.dart';
 import 'package:meteoplus_app/widgets/weather_hourly_list_view.dart';
@@ -16,38 +18,33 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
       gradient: gradientPrimaryColors,
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
-            height: 70,
+            height: 53.0.r,
           ),
-          CityTitle(),
-          CurrentLocation(),
+          const CityTitle(),
+          const CurrentLocation(),
           SizedBox(
-            height: 20,
+            height: 16.0.r,
           ),
-          WeatherStats(),
+          const WeatherStats(),
           SizedBox(
-            height: 18,
+            height: 18.0.r,
           ),
-          TimeSelector(),
+          const TimeSelector(),
           SizedBox(
-            height: 20,
+            height: 20.0.r,
           ),
-          WeatherHourlyView(),
-          CurvedContainer(
-            child: Center(
-              child: Stack(
-                children: [
-                  Text(
-                    'Hello, World!',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  UpArrowButton(),
-                ],
-              ),
-            ),
+          const WeatherHourlyView(),
+          const CurvedContainer(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                DetailsButton()
+              ],
+            )
           ),
         ],
       ),

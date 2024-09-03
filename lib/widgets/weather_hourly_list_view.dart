@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meteoplus_app/widgets/weather_hourly_button.dart';
 
 class WeatherHourlyView extends StatelessWidget {
@@ -6,37 +7,37 @@ class WeatherHourlyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(children: [
         SizedBox(
-          width: 12,
+          width: 12.0.r,
         ),
-        WeatherHourlyButton(
+        const WeatherHourlyButton(
           currentTime: true,
         ),
         SizedBox(
-          width: 12,
+          width: 12.0.r,
         ),
-        WeatherHourlyButton(
+        const WeatherHourlyButton(
           currentTime: false,
         ),
         SizedBox(
-          width: 12,
+          width: 12.0.r,
         ),
-        WeatherHourlyButton(
+        const WeatherHourlyButton(
           currentTime: false,
         ),
         SizedBox(
-          width: 12,
+          width: 12.0.r,
         ),
-        WeatherHourlyButton(
+        const WeatherHourlyButton(
           currentTime: false,
         ),
         SizedBox(
-          width: 12,
+          width: 12.0.r,
         ),
-        WeatherHourlyButton(
+        const WeatherHourlyButton(
           currentTime: false,
         ),
       ]),

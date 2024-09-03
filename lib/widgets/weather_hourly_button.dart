@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meteoplus_app/utils/gradient_button_colors.dart';
 import 'package:gradient_borders/gradient_borders.dart';
@@ -15,22 +16,22 @@ class WeatherHourlyButton extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 165,
-            width: 65,
+            height: 165.0.r,
+            width: 65.0.r,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
               gradient: gradientButtonColors,
               border: GradientBoxBorder(
                 gradient: gradientButtonColorsInverse,
-                width: 2,
+                width: 2.0.r,
               ),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 16,
+                SizedBox(
+                  height: 16.0.r,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +39,7 @@ class WeatherHourlyButton extends StatelessWidget {
                     Text(
                       '4',
                       style: GoogleFonts.poppins(
-                        fontSize: 16,
+                        fontSize: 16.0.r,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
@@ -46,48 +47,48 @@ class WeatherHourlyButton extends StatelessWidget {
                     Text(
                       'PM',
                       style: GoogleFonts.poppins(
-                        fontSize: 12,
+                        fontSize: 12.0.r,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 8,
+                SizedBox(
+                  height: 8.0.r,
                 ),
                 Image.asset(
                   'assets/images/partly_cloudy.png',
-                  width: 48,
-                  height: 48,
+                  width: 48.0.r,
+                  height: 48.0.r,
                 ),
-                const SizedBox(
-                  height: 8,
+                SizedBox(
+                  height: 8.0.r,
                 ),
                 Text(
                   '14°',
                   style: GoogleFonts.poppins(
-                    fontSize: 18,
+                    fontSize: 18.0.r,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(
-                  height: 16,
+                SizedBox(
+                  height: 16.0.r,
                 ),
               ],
             ),
           ),
-          const SizedBox(
-            height: 8,
+          SizedBox(
+            height: 8.0.r,
           ),
           if (currentTime)
             Positioned(
               bottom: 0,
               left: (65 - 10) / 2,
               child: Container(
-                width: 10.0,
-                height: 10.0,
+                width: 10.0.r,
+                height: 10.0.r,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
