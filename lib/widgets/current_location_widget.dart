@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,16 +14,16 @@ class CurrentLocation extends StatelessWidget {
         children: [
           SvgPicture.asset(
             'assets/icons/current_location.svg',
-            width: 16,
-            height: 16,
+            width: 16.0.r,
+            height: 16.0.r,
           ),
-          const SizedBox(
-            width: 8,
+           SizedBox(
+            width: 8.0.r,
           ),
           Text(
             'Current Location',
             style: GoogleFonts.poppins(
-              fontSize: 12,
+              fontSize: 12.0.r,
               fontWeight: FontWeight.w600,
               color: Colors.white,
             ),
