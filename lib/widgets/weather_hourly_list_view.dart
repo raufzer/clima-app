@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/widgets/hourly_weather_button.dart';
+import 'package:meteoplus_app/widgets/weather_hourly_button.dart';
 
-class HourlyWeatherView extends StatelessWidget {
-  const HourlyWeatherView({super.key});
+class WeatherHourlyView extends StatelessWidget {
+  const WeatherHourlyView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,31 +12,31 @@ class HourlyWeatherView extends StatelessWidget {
         SizedBox(
           width: 12,
         ),
-        HourlyWeatherButton(
+        WeatherHourlyButton(
           currentTime: true,
         ),
         SizedBox(
           width: 12,
         ),
-        HourlyWeatherButton(
+        WeatherHourlyButton(
           currentTime: false,
         ),
         SizedBox(
           width: 12,
         ),
-        HourlyWeatherButton(
+        WeatherHourlyButton(
           currentTime: false,
         ),
         SizedBox(
           width: 12,
         ),
-        HourlyWeatherButton(
+        WeatherHourlyButton(
           currentTime: false,
         ),
         SizedBox(
           width: 12,
         ),
-        HourlyWeatherButton(
+        WeatherHourlyButton(
           currentTime: false,
         ),
       ]),

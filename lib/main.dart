@@ -13,6 +13,7 @@ class MeteoPlusApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
+      
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
@@ -20,8 +21,7 @@ class MeteoPlusApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const HomeScreen(
-      ),
+      child: const HomeScreen(),
     );
   }
 }
