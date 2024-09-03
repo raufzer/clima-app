@@ -3,10 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:meteoplus_app/utils/gradient_button_colors.dart';
 import 'package:gradient_borders/gradient_borders.dart';
 
-class HourlyWeatherButton extends StatelessWidget {
+class WeatherHourlyButton extends StatelessWidget {
   final bool currentTime;
 
-  const HourlyWeatherButton({super.key, required this.currentTime});
+  const WeatherHourlyButton({super.key, required this.currentTime});
 
   @override
   Widget build(BuildContext context) {

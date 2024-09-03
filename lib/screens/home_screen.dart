@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:meteoplus_app/utils/gradient__primary_colors.dart';
 import 'package:meteoplus_app/widgets/city_title_widget.dart';
 import 'package:meteoplus_app/widgets/current_location_widget.dart';
-import 'package:meteoplus_app/widgets/hourly_weather_view.dart';
+import 'package:meteoplus_app/widgets/up_arrow_button.dart';
+import 'package:meteoplus_app/widgets/upward_slider.dart';
+import 'package:meteoplus_app/widgets/weather_hourly_list_view.dart';
 import 'package:meteoplus_app/widgets/time_selector_widget.dart';
 import 'package:meteoplus_app/widgets/weather_stats_widget.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -33,7 +35,20 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          HourlyWeatherView(),
+          WeatherHourlyView(),
+          CurvedContainer(
+            child: Center(
+              child: Stack(
+                children: [
+                  Text(
+                    'Hello, World!',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  UpArrowButton(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
