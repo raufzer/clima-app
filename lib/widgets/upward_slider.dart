@@ -14,13 +14,12 @@ class CurvedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        flex: 2,
+      flex: 2,
       child: ClipPath(
         clipper: CurvedClipper(100),
         child: Stack(
           children: [
             Container(
-              
               decoration: BoxDecoration(
                 gradient: gradientButtonColors,
                 border: GradientBoxBorder(
