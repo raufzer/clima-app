@@ -37,7 +37,28 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20.0.r,
           ),
-          TimeSelector(),
+          const WeatherHourlyView(),
+          CurvedContainer(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 64.0.r,
+              ),
+              const UpArrowButton(),
+              SizedBox(
+                height: 16.0.r,
+              ),
+              Text(
+                'Swipe up for more details',
+                style: GoogleFonts.poppins(
+                  fontSize: 12.0.r,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          )),
         ],
       ),
     );
