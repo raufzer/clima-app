@@ -42,6 +42,7 @@ dependencies:
   intl: ^0.19.0
   scaffold_gradient_background: ^1.0.3+1
   google_fonts: ^6.2.1
+  gradient_borders: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/current_location.svg
+    - assets/icons/up_arrow.svg
+    - assets/icons/up_arrow.png
     - assets/images/partly_cloudy.svg
     - assets/images/partly_cloudy.png
 
