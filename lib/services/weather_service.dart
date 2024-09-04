@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:meteoplus_app/models/weather_models.dart';
@@ -21,12 +23,17 @@ class WeatherService {
           'alerts': 'no',
         },
       );
+
       Map<String, dynamic> data = res.data;
       WeatherModel weatherModel = WeatherModel.fromJson(data);
       return (weatherModel);
     } on DioException catch (e) {
-      final String errorMessage = e.response?.data['error']['message'];
+      final String errorMessage =
+          e.response?.data['error']['message'] ?? 'An error occurred';
       throw Exception(errorMessage);
+    } catch (e) {
+      log(e.toString());
+      throw Exception('An error occurred');
     }
   }
 }
