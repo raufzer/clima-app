@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.meteoplus_app"
-    compileSdk = flutter.compileSdkVersion
+    compileSdkVersion 34
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
