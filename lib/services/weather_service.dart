@@ -6,8 +6,8 @@ import 'package:meteoplus_app/models/weather_models.dart';
 
 class WeatherService {
   String apiKey = dotenv.env['API_KEY']!;
-  final Dio dio;
   final baseUrl = dotenv.env['API_URL'];
+  final Dio dio;
 
   WeatherService({required this.dio});
 
@@ -16,8 +16,8 @@ class WeatherService {
       Response res = await dio.get(
         baseUrl!,
         queryParameters: {
-          'days': 1,
           'key': apiKey,
+          'days': 1,
           'q': cityName,
           'aqi': 'no',
           'alerts': 'no',
