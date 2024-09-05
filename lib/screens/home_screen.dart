@@ -8,7 +8,7 @@ import 'package:meteoplus_app/widgets/up_arrow_button.dart';
 import 'package:meteoplus_app/widgets/upward_slider.dart';
 import 'package:meteoplus_app/widgets/weather_hourly_list_view.dart';
 import 'package:meteoplus_app/widgets/time_selector_widget.dart';
-import 'package:meteoplus_app/widgets/weather_stats_widget.dart';
+import 'package:meteoplus_app/widgets/weather_stats_widget_builder.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 16.0.r,
           ),
-          const WeatherStats(),
+          const WeatherStatsBuilder(),
           SizedBox(
             height: 18.0.r,
           ),

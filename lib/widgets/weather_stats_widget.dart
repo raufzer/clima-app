@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meteoplus_app/models/weather_models.dart';
 
 class WeatherStats extends StatelessWidget {
-  const WeatherStats({super.key});
-
+  const WeatherStats({super.key, required this.weatherModel});
+  final WeatherModel weatherModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,7 +32,7 @@ class WeatherStats extends StatelessWidget {
               margin: const EdgeInsets.only(right: 25).r,
               child: FittedBox(
                 child: Text(
-                  '14°',
+                  '${weatherModel.avergeTemp}°',
                   style: GoogleFonts.poppins(
                     fontSize: 100.0.r,
                     fontWeight: FontWeight.w300,
@@ -48,7 +49,7 @@ class WeatherStats extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(right: 58.0.r, left: 58.0.r),
               child: Text(
-                'Partly Cloud  -  H:17°  L:4°',
+                '${weatherModel.weatherState} - H:${weatherModel.maxTemp}° L:${weatherModel.minTemp}°',
                 style: GoogleFonts.poppins(
                   fontSize: 14.0.r,
                   fontWeight: FontWeight.w600,

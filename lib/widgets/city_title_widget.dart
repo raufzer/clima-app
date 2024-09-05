@@ -11,7 +11,7 @@ class CityTitle extends StatelessWidget {
       height: 60.0.r,
       child: Center(
         child: Text(
-          'San Diego',
+          'Algiers',
           style: GoogleFonts.poppins(
             fontSize: 32.0.r,
             fontWeight: FontWeight.w600,
