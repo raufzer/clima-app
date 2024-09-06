@@ -14,49 +14,42 @@ class WeatherStats extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(width: 10.0.r),
             // SvgPicture.asset(
             //   'assets/images/partly_cloudy.svg',
             //   width: 135,
             //   height: 130,
             // ),
             Container(
-              margin: const EdgeInsets.only(left: 25).r,
+              margin: const EdgeInsets.only(left: 25,right:10).r,
               child: Image.asset(
                 'assets/images/partly_cloudy.png',
-                width: 135.0.r,
-                height: 130.0.r,
               ),
             ),
-            SizedBox(width: 20.0.r),
-            Container(
-              margin: const EdgeInsets.only(right: 25).r,
-              child: FittedBox(
-                child: Text(
-                  '${weatherModel.avergeTemp}°',
-                  style: GoogleFonts.poppins(
-                    fontSize: 100.0.r,
-                    fontWeight: FontWeight.w300,
-                    color: Colors.white,
-                  ),
-                ),
+            Text(
+              '${weatherModel.avergeTemp}°',
+              style: GoogleFonts.poppins(
+                fontSize: 90.0.r,
+                fontWeight: FontWeight.w300,
+                color: Colors.white,
               ),
             ),
+            SizedBox(width: 10.0.r),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.only(right: 58.0.r, left: 58.0.r),
-              child: Text(
-                '${weatherModel.weatherState} - H:${weatherModel.maxTemp}° L:${weatherModel.minTemp}°',
-                style: GoogleFonts.poppins(
-                  fontSize: 14.0.r,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
+            SizedBox(width: 10.0.r),
+            Text(
+              '${weatherModel.weatherState} - H:${weatherModel.maxTemp}° L:${weatherModel.minTemp}°',
+              style: GoogleFonts.poppins(
+                fontSize: 14.0.r,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
             ),
+            SizedBox(width: 10.0.r),
           ],
         ),
       ],

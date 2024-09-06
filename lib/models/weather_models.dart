@@ -19,11 +19,11 @@ class WeatherModel {
       cityName: json['location']['name'],
       date: json['forecast']['forecastday'][0]['date'].toString(),
       avergeTemp:
-          json['forecast']['forecastday'][0]['day']['avgtemp_c'].toString(),
+          json['forecast']['forecastday'][0]['day']['avgtemp_c'].round().toString(),
       minTemp:
-          json['forecast']['forecastday'][0]['day']['mintemp_c'].toString(),
+          json['forecast']['forecastday'][0]['day']['mintemp_c'].round().toString(),
       maxTemp:
-          json['forecast']['forecastday'][0]['day']['maxtemp_c'].toString(),
+          json['forecast']['forecastday'][0]['day']['maxtemp_c'].round().toString(),
       weatherState: json['forecast']['forecastday'][0]['day']['condition']
           ['text'],
     );
