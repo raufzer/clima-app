@@ -29,11 +29,17 @@ class _WeatherStatsBuilderState extends State<WeatherStatsBuilder> {
         future: weatherStats,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return WeatherStats(weatherModel: snapshot.data!);
+            return WeatherStats(
+              weatherModel: snapshot.data!,
+            );
           } else if (snapshot.hasError) {
-            return Text('${snapshot.error}');
+            return const Center(
+              child: Text('An error occurred'),
+            );
           } else {
-            return const CircularProgressIndicator();
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
           }
         });
   }
