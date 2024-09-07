@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: unused_import
+import 'package:meteoplus_app/utils/input_city_name.dart';
 // import 'package:meteoplus_app/utils/get_long_lat_coordinates.dart';
 
-class CurrentLocation extends StatelessWidget {
+class CurrentLocation extends StatefulWidget {
   const CurrentLocation({super.key});
+
+  @override
+  State<CurrentLocation> createState() => _CurrentLocationState();
+}
+
+class _CurrentLocationState extends State<CurrentLocation> {
 
   @override
   Widget build(BuildContext context) {

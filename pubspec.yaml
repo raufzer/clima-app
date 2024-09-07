@@ -73,8 +73,8 @@ flutter:
     - assets/icons/current_location.svg
     - assets/icons/up_arrow.svg
     - assets/icons/up_arrow.png
-    - assets/images/partly_cloudy.svg
     - assets/images/partly_cloudy.png
+    
     - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
