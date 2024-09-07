@@ -47,5 +47,6 @@ app.*.map.json
 /android/app/release
 
 # Files
-./lib/utils/get_place_marks.dart
-./lib/utils/get_long_lat_coordinates.dart
+meteoplus-app/lib/utils
+/get_long_lat_coordinates.dart
+meteoplus-app/lib/utils/get_place_marks.dart
