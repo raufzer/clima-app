@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CityTitle extends StatelessWidget {
   const CityTitle({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

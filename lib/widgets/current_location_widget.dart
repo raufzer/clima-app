@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class CurrentLocation extends StatefulWidget {
   const CurrentLocation({super.key});
 
@@ -12,11 +11,10 @@ class CurrentLocation extends StatefulWidget {
 }
 
 class _CurrentLocationState extends State<CurrentLocation> {
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
