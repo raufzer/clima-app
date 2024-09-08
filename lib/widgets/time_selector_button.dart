@@ -13,8 +13,7 @@ class TimeSelectorButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-      },
+      onTap: () {},
       child: ClipRRect(
         borderRadius: BorderRadius.circular(100),
         child: Container(
