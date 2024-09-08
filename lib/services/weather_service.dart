@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:meteoplus_app/models/hourly_weather_model.dart';
 import 'package:meteoplus_app/models/weather_models.dart';
 
 class WeatherService {
@@ -26,6 +27,34 @@ class WeatherService {
       Map<String, dynamic> data = res.data;
       WeatherModel weatherModel = WeatherModel.fromJson(data);
       return (weatherModel);
+    } on DioException catch (e) {
+      final String errorMessage =
+          e.response?.data['error']['message'] ?? 'An error occurred';
+      throw Exception(errorMessage);
+    } catch (e) {
+      log(e.toString());
+      throw Exception('An error occurred');
+    }
+  }
+  Future<List<HourlyWeatherModel>> getHourlyWeather() async {
+    try {
+      Response res = await dio.get(
+        baseUrl!,
+        queryParameters: {
+          'key': apiKey,
+          'days': 1,
+          'aqi': 'no',
+          'alerts': 'no',
+        },
+      );
+
+      Map<String, dynamic> data = res.data;
+      List<dynamic> weather = data['forecast']['forecastdays'][0]['hour'];
+      List<HourlyWeatherModel> hourlyWeatherList = [];
+      for (var hourlyWeather in weather) {
+        hourlyWeatherList.add(HourlyWeatherModel.fromJson(hourlyWeather));
+      }
+      return hourlyWeatherList;
     } on DioException catch (e) {
       final String errorMessage =
           e.response?.data['error']['message'] ?? 'An error occurred';

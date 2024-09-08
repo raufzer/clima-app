@@ -4,8 +4,8 @@ import 'package:meteoplus_app/utils/gradient__primary_colors.dart';
 import 'package:meteoplus_app/widgets/city_title_widget.dart';
 import 'package:meteoplus_app/widgets/current_location_widget.dart';
 import 'package:meteoplus_app/widgets/slider_widget.dart';
-import 'package:meteoplus_app/widgets/weather_hourly_list_view.dart';
 import 'package:meteoplus_app/widgets/time_selector_widget.dart';
+import 'package:meteoplus_app/widgets/weather_hourly_list_view_builder.dart';
 import 'package:meteoplus_app/widgets/weather_stats_widget_builder.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 20.0.r,
           ),
-          const WeatherHourlyView(),
+          const WeatherHourlyViewBuilder(),
           const SliderWidget(),
         ],
       ),

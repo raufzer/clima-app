@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meteoplus_app/models/hourly_weather_model.dart';
 import 'package:meteoplus_app/utils/gradient_button_colors.dart';
 import 'package:gradient_borders/gradient_borders.dart';
 import 'package:meteoplus_app/widgets/current_time_dot.dart';
 
 class WeatherHourlyButton extends StatelessWidget {
-  final bool currentTime;
+  final HourlyWeatherModel weatherHourlyModel;
 
-  const WeatherHourlyButton({super.key, required this.currentTime});
+  const WeatherHourlyButton({super.key,required this.weatherHourlyModel});
 
   @override
   Widget build(BuildContext context) {
+    final timeString = weatherHourlyModel.time; 
+    final amPm = timeString.substring(timeString.length - 2); 
+
+    
+    final hour = int.parse(timeString.substring(0, timeString.length - 3)); 
+
+    final currentHour = DateTime.now().hour; 
+
     return GestureDetector(
       onTap: () {},
       child: Column(children: [
@@ -37,7 +46,7 @@ class WeatherHourlyButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '4',
+                    hour.toString(), 
                     style: GoogleFonts.poppins(
                       fontSize: 16.0.r,
                       fontWeight: FontWeight.w500,
@@ -45,7 +54,7 @@ class WeatherHourlyButton extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'PM',
+                    amPm, 
                     style: GoogleFonts.poppins(
                       fontSize: 12.0.r,
                       fontWeight: FontWeight.w500,
@@ -57,32 +66,14 @@ class WeatherHourlyButton extends StatelessWidget {
               SizedBox(
                 height: 8.0.r,
               ),
-              Image.asset(
-                'assets/images/partly_cloudy.png',
-                width: 48.0.r,
-                height: 48.0.r,
-              ),
-              SizedBox(
-                height: 8.0.r,
-              ),
-              Text(
-                '14°',
-                style: GoogleFonts.poppins(
-                  fontSize: 18.0.r,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(
-                height: 16.0.r,
-              ),
+              
             ],
           ),
         ),
         SizedBox(
           height: 8.0.r,
         ),
-        if (currentTime) const CurrentTimeDot(),
+        if (currentHour == hour) const CurrentTimeDot(isHighlighted: true), 
       ]),
     );
   }
