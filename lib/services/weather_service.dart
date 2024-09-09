@@ -36,12 +36,14 @@ class WeatherService {
       throw Exception('An error occurred');
     }
   }
+
   Future<List<HourlyWeatherModel>> getHourlyWeather() async {
     try {
       Response res = await dio.get(
         baseUrl!,
         queryParameters: {
           'key': apiKey,
+          'q': 'Algiers',
           'days': 1,
           'aqi': 'no',
           'alerts': 'no',
@@ -49,12 +51,22 @@ class WeatherService {
       );
 
       Map<String, dynamic> data = res.data;
-      List<dynamic> weather = data['forecast']['forecastdays'][0]['hour'];
-      List<HourlyWeatherModel> hourlyWeatherList = [];
-      for (var hourlyWeather in weather) {
-        hourlyWeatherList.add(HourlyWeatherModel.fromJson(hourlyWeather));
+
+      if (data['forecast'] != null &&
+          data['forecast']['forecastday'] != null &&
+          data['forecast']['forecastday'].isNotEmpty) {
+        List<dynamic> weather = data['forecast']['forecastday'][0]['hour'];
+
+        List<HourlyWeatherModel> hourlyWeatherList = [];
+
+        for (var hourlyWeather in weather) {
+          hourlyWeatherList.add(HourlyWeatherModel.fromJson(hourlyWeather));
+        }
+
+        return hourlyWeatherList;
+      } else {
+        throw Exception('Weather data not available');
       }
-      return hourlyWeatherList;
     } on DioException catch (e) {
       final String errorMessage =
           e.response?.data['error']['message'] ?? 'An error occurred';

@@ -9,17 +9,20 @@ import 'package:meteoplus_app/widgets/current_time_dot.dart';
 class WeatherHourlyButton extends StatelessWidget {
   final HourlyWeatherModel weatherHourlyModel;
 
-  const WeatherHourlyButton({super.key,required this.weatherHourlyModel});
+  const WeatherHourlyButton({super.key, required this.weatherHourlyModel});
 
   @override
   Widget build(BuildContext context) {
-    final timeString = weatherHourlyModel.time; 
-    final amPm = timeString.substring(timeString.length - 2); 
+    final timeString = weatherHourlyModel.time;
+    final amPm = timeString.substring(timeString.length - 2);
+    final hour = int.parse(timeString.substring(0, timeString.length - 3));
 
-    
-    final hour = int.parse(timeString.substring(0, timeString.length - 3)); 
+    final now = DateTime.now();
+    final currentHour =
+        now.hour > 12 ? now.hour - 12 : (now.hour == 0 ? 12 : now.hour);
+    final currentAmPm = now.hour < 12 ? "AM" : "PM";
 
-    final currentHour = DateTime.now().hour; 
+    final isCurrentTime = (currentHour == hour && currentAmPm == amPm);
 
     return GestureDetector(
       onTap: () {},
@@ -46,7 +49,7 @@ class WeatherHourlyButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    hour.toString(), 
+                    hour.toString(),
                     style: GoogleFonts.poppins(
                       fontSize: 16.0.r,
                       fontWeight: FontWeight.w500,
@@ -54,7 +57,7 @@ class WeatherHourlyButton extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    amPm, 
+                    amPm,
                     style: GoogleFonts.poppins(
                       fontSize: 12.0.r,
                       fontWeight: FontWeight.w500,
@@ -66,14 +69,32 @@ class WeatherHourlyButton extends StatelessWidget {
               SizedBox(
                 height: 8.0.r,
               ),
-              
+              Image.asset(
+                'assets/images/partly_cloudy.png',
+                width: 48.0.r,
+                height: 48.0.r,
+              ),
+              SizedBox(
+                height: 8.0.r,
+              ),
+              Text(
+                '${weatherHourlyModel.temp}°',
+                style: GoogleFonts.poppins(
+                  fontSize: 18.0.r,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                height: 16.0.r,
+              ),
             ],
           ),
         ),
         SizedBox(
           height: 8.0.r,
         ),
-        if (currentHour == hour) const CurrentTimeDot(isHighlighted: true), 
+        if (isCurrentTime) const CurrentTimeDot(isHighlighted: true),
       ]),
     );
   }
