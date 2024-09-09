@@ -13,8 +13,8 @@ class CurrentTimeDot extends StatelessWidget {
       height: 10.0.r,
       decoration: BoxDecoration(
         color: isHighlighted
-            ? Colors.transparent
-            : Colors.white, 
+            ? Colors.white
+            : Colors.transparent, 
         shape: BoxShape.circle,
       ),
     );

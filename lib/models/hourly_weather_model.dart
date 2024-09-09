@@ -13,8 +13,8 @@ class HourlyWeatherModel {
     final formattedHour = hour % 12 == 0 ? 12 : hour % 12;
 
     return HourlyWeatherModel(
-      temp: json['temp_c']..round().toString(),
-      time: "$formattedHour $amPm",
+      temp: json['temp_c'].round().toString(),
+      time: "$formattedHour $amPm".toString(),
     );
   }
 }
