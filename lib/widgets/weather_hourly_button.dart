@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:meteoplus_app/models/hourly_weather_model.dart';
 import 'package:meteoplus_app/utils/gradient_button_colors.dart';
 import 'package:gradient_borders/gradient_borders.dart';
+import 'package:meteoplus_app/utils/weather_icon_selector.dart';
 import 'package:meteoplus_app/widgets/current_time_dot.dart';
 
 class WeatherHourlyButton extends StatelessWidget {
@@ -69,11 +70,7 @@ class WeatherHourlyButton extends StatelessWidget {
               SizedBox(
                 height: 8.0.r,
               ),
-              Image.asset(
-                'assets/images/partly_cloudy.png',
-                width: 48.0.r,
-                height: 48.0.r,
-              ),
+            weatherIconSelctor(weatherHourlyModel.condition, 48, 48),
               SizedBox(
                 height: 8.0.r,
               ),

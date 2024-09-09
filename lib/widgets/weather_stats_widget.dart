@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meteoplus_app/models/weather_models.dart';
+import 'package:meteoplus_app/utils/weather_icon_selector.dart';
 
 class WeatherStats extends StatelessWidget {
   const WeatherStats({super.key, required this.weatherModel});
@@ -15,17 +16,7 @@ class WeatherStats extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(width: 10.0.r),
-            // SvgPicture.asset(
-            //   'assets/images/partly_cloudy.svg',
-            //   width: 135,
-            //   height: 130,
-            // ),
-            Container(
-              margin: const EdgeInsets.only(left: 25,right:10).r,
-              child: Image.asset(
-                'assets/images/partly_cloudy.png',
-              ),
-            ),
+            weatherIconSelctor(weatherModel.weatherState, 135, 130),
             Text(
               '${weatherModel.avergeTemp}°',
               style: GoogleFonts.poppins(

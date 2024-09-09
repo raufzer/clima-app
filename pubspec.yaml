@@ -74,6 +74,15 @@ flutter:
     - assets/icons/up_arrow.svg
     - assets/icons/up_arrow.png
     - assets/images/partly_cloudy.png
+    - assets/icons/cloudy.svg
+    - assets/icons/night_storm.svg
+    - assets/icons/partly_cloudy.svg
+    - assets/icons/Rain_storm.svg
+    - assets/icons/rainy.svg
+    - assets/icons/slight_touch_happyday.svg
+    - assets/icons/snowy.svg
+    - assets/icons/thnderstorm.svg
+
     
     - .env
 

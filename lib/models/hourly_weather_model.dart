@@ -1,8 +1,9 @@
 class HourlyWeatherModel {
   final String time;
   final String temp;
+  final String condition;
 
-  HourlyWeatherModel({required this.time, required this.temp});
+  HourlyWeatherModel({required this.time, required this.temp, required this.condition});
 
   factory HourlyWeatherModel.fromJson(Map<String, dynamic> json) {
     final timeString = json['time'];
@@ -13,6 +14,7 @@ class HourlyWeatherModel {
     final formattedHour = hour % 12 == 0 ? 12 : hour % 12;
 
     return HourlyWeatherModel(
+      condition: json['condition']['text'],
       temp: json['temp_c'].round().toString(),
       time: "$formattedHour $amPm".toString(),
     );
