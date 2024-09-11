@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
-import 'package:meteoplus_app/utils/gradient_button_colors.dart';
+import 'package:clima_app/utils/gradient_button_colors.dart';
 
 class DetailsButton extends StatelessWidget {
   const DetailsButton({super.key});

@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:meteoplus_app/models/hourly_weather_model.dart';
-import 'package:meteoplus_app/models/weather_models.dart';
+import 'package:clima_app/models/hourly_weather_model.dart';
+import 'package:clima_app/models/weather_models.dart';
 
 class WeatherService {
   String apiKey = dotenv.env['API_KEY']!;

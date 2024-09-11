@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meteoplus_app/widgets/up_arrow_button.dart';
-import 'package:meteoplus_app/widgets/upward_slider.dart';
+import 'package:clima_app/widgets/up_arrow_button.dart';
+import 'package:clima_app/widgets/upward_slider.dart';
 
 class SliderWidget extends StatelessWidget {
   const SliderWidget({super.key});

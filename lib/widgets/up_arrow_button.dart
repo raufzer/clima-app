@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
-import 'package:meteoplus_app/utils/gradient_button_colors.dart';
+import 'package:clima_app/utils/gradient_button_colors.dart';
 
 class UpArrowButton extends StatelessWidget {
   const UpArrowButton({super.key});
