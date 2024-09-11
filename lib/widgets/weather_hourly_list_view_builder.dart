@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/models/hourly_weather_model.dart';
-import 'package:meteoplus_app/services/weather_service.dart';
-import 'package:meteoplus_app/widgets/weather_hourly_list_view.dart';
+import 'package:clima_app/models/hourly_weather_model.dart';
+import 'package:clima_app/services/weather_service.dart';
+import 'package:clima_app/widgets/weather_hourly_list_view.dart';
 
 class WeatherHourlyViewBuilder extends StatefulWidget {
   const WeatherHourlyViewBuilder({super.key});

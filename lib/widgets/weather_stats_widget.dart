@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meteoplus_app/models/weather_models.dart';
-import 'package:meteoplus_app/utils/weather_icon_selector.dart';
+import 'package:clima_app/models/weather_models.dart';
+import 'package:clima_app/utils/weather_icon_selector.dart';
 
 class WeatherStats extends StatelessWidget {
   const WeatherStats({super.key, required this.weatherModel});

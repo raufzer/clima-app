@@ -1,17 +1,17 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/screens/home_screen.dart';
+import 'package:clima_app/screens/home_screen.dart';
 
 void main() async {
   await dotenv.load();
   // WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  runApp(const MeteoPlusApp());
+  runApp(const CimaApp());
 }
 
-class MeteoPlusApp extends StatelessWidget {
-  const MeteoPlusApp({super.key});
+class CimaApp extends StatelessWidget {
+  const CimaApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MeteoPlusApp extends StatelessWidget {
         builder: (_, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'MeteoPlus',
+            title: 'Clima',
             home: child,
           );
         },

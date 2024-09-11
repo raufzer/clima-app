@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/models/hourly_weather_model.dart';
-import 'package:meteoplus_app/widgets/weather_hourly_button.dart';
+import 'package:clima_app/models/hourly_weather_model.dart';
+import 'package:clima_app/widgets/weather_hourly_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WeatherHourlyView extends StatelessWidget {

@@ -1,31 +1,35 @@
-
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
-SvgPicture weatherIconSelctor(String text, double iconWidth, double iconHeight){
-
-  switch(text){
+Image weatherIconSelctor(String text, double iconWidth, double iconHeight) {
+  switch (text) {
     case 'Sunny':
-      return SvgPicture.asset('assets/icons/slight_touch_happyday.svg',
-      width: iconWidth.r,
-      height: iconHeight.r
-      );
+      return Image.asset('assets/icons/sunny.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Party Cloudy':
-      return SvgPicture.asset('assets/icons/partly_cloudy.svg');
+      return Image.asset('assets/icons/partly_cloudy.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Cloudy':
-      return SvgPicture.asset('assets/icons/cloudy.svg');
+      return Image.asset('assets/icons/cloudy.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Rainy':
-      return SvgPicture.asset('assets/icons/rainy.svg');
+      return Image.asset('assets/icons/rainy.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Snowy':
-      return SvgPicture.asset('assets/icons/snowy.svg');
+      return Image.asset('assets/icons/snowy.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Thunderstorm':
-      return SvgPicture.asset('assets/icons/thnderstorm.svg');
+      return Image.asset('assets/icons/thunder_storm.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Moderate or heavy rain with thunder':
-      return SvgPicture.asset('assets/icons/Rain_storm.svg');
+      return Image.asset('assets/icons/rain_storm.png',
+          width: iconWidth.r, height: iconHeight.r);
     case 'Thundery outbreaks possible':
-      return SvgPicture.asset('assets/icons/partly_day_storm.svg');
-    
+      return Image.asset('assets/icons/partly_day_storm.png',
+          width: iconWidth.r, height: iconHeight.r);
+
     default:
-      return SvgPicture.asset('assets/icons/slight_touch_happyday.svg');
+      return Image.asset('assets/icons/sunny.png',
+          width: iconWidth.r, height: iconHeight.r);
   }
 }

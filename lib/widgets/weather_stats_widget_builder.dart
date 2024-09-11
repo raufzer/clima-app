@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/models/weather_models.dart';
-import 'package:meteoplus_app/services/weather_service.dart';
-import 'package:meteoplus_app/widgets/weather_stats_widget.dart';
+import 'package:clima_app/models/weather_models.dart';
+import 'package:clima_app/services/weather_service.dart';
+import 'package:clima_app/widgets/weather_stats_widget.dart';
 
 class WeatherStatsBuilder extends StatefulWidget {
   const WeatherStatsBuilder({

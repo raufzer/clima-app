@@ -1,4 +1,4 @@
-name: meteoplus_app
+name: clima_app
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -72,16 +72,16 @@ flutter:
   assets:
     - assets/icons/current_location.svg
     - assets/icons/up_arrow.svg
-    - assets/icons/up_arrow.png
     - assets/images/partly_cloudy.png
-    - assets/icons/cloudy.svg
-    - assets/icons/night_storm.svg
-    - assets/icons/partly_cloudy.svg
-    - assets/icons/Rain_storm.svg
-    - assets/icons/rainy.svg
-    - assets/icons/slight_touch_happyday.svg
-    - assets/icons/snowy.svg
-    - assets/icons/thnderstorm.svg
+    - assets/icons/cloudy.png
+    - assets/icons/night_storm.png
+    - assets/icons/partly_cloudy.png
+    - assets/icons/rain_storm.png
+    - assets/icons/rainy.png
+    - assets/icons/sunny.png
+    - assets/icons/snowy.png
+    - assets/icons/thunder_storm.png
+    - assets/icons/rainy.png
 
     
     - .env

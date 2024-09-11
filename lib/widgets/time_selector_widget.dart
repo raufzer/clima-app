@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meteoplus_app/widgets/time_selector_button.dart';
+import 'package:clima_app/widgets/time_selector_button.dart';
 class TimeSelector extends StatelessWidget {
   const TimeSelector({super.key});
 

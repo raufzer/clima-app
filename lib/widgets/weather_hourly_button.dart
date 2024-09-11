@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meteoplus_app/models/hourly_weather_model.dart';
-import 'package:meteoplus_app/utils/gradient_button_colors.dart';
+import 'package:clima_app/models/hourly_weather_model.dart';
+import 'package:clima_app/utils/gradient_button_colors.dart';
 import 'package:gradient_borders/gradient_borders.dart';
-import 'package:meteoplus_app/utils/weather_icon_selector.dart';
-import 'package:meteoplus_app/widgets/current_time_dot.dart';
+import 'package:clima_app/utils/weather_icon_selector.dart';
+import 'package:clima_app/widgets/current_time_dot.dart';
 
 class WeatherHourlyButton extends StatelessWidget {
   final HourlyWeatherModel weatherHourlyModel;
