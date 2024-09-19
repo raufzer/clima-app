@@ -9,7 +9,7 @@ void main() async {
   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   runApp(const CimaApp());
 }
-
+// just commited to not lose the green streak
 class CimaApp extends StatelessWidget {
   const CimaApp({super.key});
 
