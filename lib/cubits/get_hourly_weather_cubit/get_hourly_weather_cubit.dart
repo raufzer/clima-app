@@ -7,12 +7,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class GetHourlyWeatherCubit extends Cubit<WeatherState> {
   GetHourlyWeatherCubit(super.initialState);
 
-
-
-  
-
   getHourlyWeather() async {
     try {
+      // ignore: unused_local_variable
       List<HourlyWeatherModel> weatherHourlyList =
           await WeatherService(dio: Dio()).getHourlyWeather();
       emit(WeatherHourlyLoadedState());
