@@ -1,5 +1,3 @@
-import 'package:clima_app/cubits/get_hourly_weather_cubit/get_hourly_weather_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -22,13 +20,10 @@ class CimaApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) {
-          return BlocProvider(
-            create: (context) => GetHourlyWeatherCubit(),
-            child: MaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: 'Clima',
-              home: child,
-            ),
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Clima',
+            home: child,
           );
         },
         child: const HomeScreen());
