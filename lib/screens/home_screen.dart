@@ -1,4 +1,7 @@
+import 'package:clima_app/cubits/get_hourly_weather_cubit/get_hourly_weather_cubit.dart';
+import 'package:clima_app/cubits/get_hourly_weather_cubit/get_hourly_weather_states.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:clima_app/utils/gradient__primary_colors.dart';
 import 'package:clima_app/widgets/city_title_widget.dart';
@@ -40,7 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 20.0.r,
           ),
-          const WeatherHourlyViewBuilder(),
+          // const WeatherHourlyViewBuilder(),
+          BlocBuilder<GetHourlyWeatherCubit, WeatherState>(
+              builder: (context, state) {
+            if (state is WeatherInitialState) {
+              return const WeatherHourlyViewBuilder();
+            } else if (state is WeatherHourlyLoadedState) {
+              return const WeatherHourlyViewBuilder();
+            } else {
+              return const Text('There is an error');
+            }
+          }),
           const SliderWidget(),
         ],
       ),
