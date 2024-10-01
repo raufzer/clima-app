@@ -12,7 +12,7 @@ class GetHourlyWeatherCubit extends Cubit<WeatherState> {
       // ignore: unused_local_variable
       List<HourlyWeatherModel> weatherHourlyList =
           await WeatherService(dio: Dio()).getHourlyWeather();
-      emit(WeatherHourlyLoadedState());
+      emit(WeatherHourlyLoadedState(weatherHourlyList: weatherHourlyList));
     } catch (e) {
       emit(WeatherHoutlyFailureState());
     }
