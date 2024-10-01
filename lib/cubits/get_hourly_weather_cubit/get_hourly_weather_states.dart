@@ -2,7 +2,7 @@ import 'package:clima_app/models/hourly_weather_model.dart';
 
 class WeatherState {}
 
-class WeatherInitialState extends WeatherState {}
+class InitialState extends WeatherState {}
 
 class WeatherHourlyLoadedState extends WeatherState {
   final List<HourlyWeatherModel> weatherHourlyList;
