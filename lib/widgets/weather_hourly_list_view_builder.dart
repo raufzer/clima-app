@@ -6,7 +6,6 @@ import 'package:clima_app/widgets/weather_hourly_list_view.dart';
 
 class WeatherHourlyViewBuilder extends StatefulWidget {
   const WeatherHourlyViewBuilder({super.key});
-
   @override
   State<WeatherHourlyViewBuilder> createState() => _WeatherHourlyViewBuilderState();
 }
@@ -17,6 +16,7 @@ class _WeatherHourlyViewBuilderState extends State<WeatherHourlyViewBuilder> {
   @override
   void initState() {
     super.initState();
+
     weatherHourlyList =
         WeatherService(dio: Dio()).getHourlyWeather();
   }

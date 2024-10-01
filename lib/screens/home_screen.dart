@@ -1,5 +1,6 @@
 import 'package:clima_app/cubits/get_hourly_weather_cubit/get_hourly_weather_cubit.dart';
 import 'package:clima_app/cubits/get_hourly_weather_cubit/get_hourly_weather_states.dart';
+import 'package:clima_app/widgets/weather_hourly_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -49,7 +50,8 @@ class _HomeScreenState extends State<HomeScreen> {
             if (state is WeatherInitialState) {
               return const WeatherHourlyViewBuilder();
             } else if (state is WeatherHourlyLoadedState) {
-              return const WeatherHourlyViewBuilder();
+              return WeatherHourlyView(
+                  hourlyWeatherList: state.weatherHourlyList);
             } else {
               return const Text('There is an error');
             }
