@@ -6,10 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class WeatherHourlyView extends StatelessWidget {
   final List<HourlyWeatherModel> hourlyWeatherList;
   const WeatherHourlyView({super.key, required this.hourlyWeatherList});
-  
+   
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return SingleChildScrollView(   
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [

@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class GetHourlyWeatherCubit extends Cubit<WeatherState> {
-  GetHourlyWeatherCubit(super.initialState);
+  GetHourlyWeatherCubit() : super(WeatherInitialState());
 
   getHourlyWeather() async {
     try {

@@ -42,3 +42,4 @@ class _WeatherHourlyViewBuilderState extends State<WeatherHourlyViewBuilder> {
     );
   }
 }
+

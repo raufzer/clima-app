@@ -26,6 +26,11 @@ class CimaApp extends StatelessWidget {
             home: child,
           );
         },
-        child: const HomeScreen());
+        child: MaterialApp(
+          theme: ThemeData(
+          
+          ),
+          home: const HomeScreen(),
+        ));
   }
 }
