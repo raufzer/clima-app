@@ -9,7 +9,6 @@ import 'package:clima_app/widgets/city_title_widget.dart';
 import 'package:clima_app/widgets/current_location_widget.dart';
 import 'package:clima_app/widgets/slider_widget.dart';
 import 'package:clima_app/widgets/time_selector_widget.dart';
-import 'package:clima_app/widgets/weather_hourly_list_view_builder.dart';
 import 'package:clima_app/widgets/weather_stats_widget_builder.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
@@ -21,6 +20,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    BlocProvider.of<GetHourlyWeatherCubit>(context).getHourlyWeather();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
@@ -44,11 +50,10 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 20.0.r,
           ),
-          // const WeatherHourlyViewBuilder(),
           BlocBuilder<GetHourlyWeatherCubit, WeatherState>(
               builder: (context, state) {
             if (state is WeatherInitialState) {
-              return const WeatherHourlyViewBuilder();
+              return const CircularProgressIndicator();
             } else if (state is WeatherHourlyLoadedState) {
               return WeatherHourlyView(
                   hourlyWeatherList: state.weatherHourlyList);
