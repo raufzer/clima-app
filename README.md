@@ -7,17 +7,14 @@
 * **Current Weather:** Get real-time weather updates for your current location or any searched city.
 * **Weather Forecast:** View weather forecasts for the upcoming days.
 * **Location-based Weather:** Automatically fetch weather data based on your current location.
-* **Search by City:** Search for weather updates by entering any city name.
 * **Weather Details:** View additional weather data like temperature, humidity, wind speed, etc.
 * **User-friendly UI:** Enjoy a clean, minimalistic design with responsive layouts.
-* **Animations:** Beautiful weather animations to represent different weather conditions.
 
 ## Technologies
 
 * **Flutter:** Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
 * **Dart:** Programming language optimized for building cross-platform apps with Flutter.
 * **API Integration:** Fetch weather data from [Weather API] for real-time updates.
-* **[Other technologies used, e.g., Firebase, REST API, etc.]**
 
 ## Screenshots
 
